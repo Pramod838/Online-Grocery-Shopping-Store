@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .product img {
+            max-width: 100px;
+            max-height: 100px;
+            margin-right: 20px;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-info h3 {
+            margin-bottom: 10px;
+        }
+
+        .product-info h4 {
+            margin-bottom: 5px;
+        }
+
+        .product-info p {
+            margin-bottom: 10px;
+        }
+
+        .product-remove {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            color: #e44d26;
+        }
+
+        .product-remove i {
+            margin-right: 5px;
+        }
+
+        .cart-total {
+            flex: 1;
+            margin-top: 20px;
+        }
+
+        .cart-total p {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .cart-total a {
+            display: inline-block;
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .cart-total a:hover {
+            background-color: #218838;
+        }
+
+        @media (max-width: 768px) {
+            .product {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="try.css">
+    <style>
+        body {
+            background-color:  #f4f3ef;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+          <div class="icon">
+            <a href="http://127.0.0.1:5500/Home%20Page%20HTML.html">
+                <h2 class="logo">AapnaKirana</h2>
+            </div>
+    <div class="main">
+        <div class="navbar">
+            <div class="menu">
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/Home%20Page%20HTML.html">HOME</a></li>
+                    <li><a href="http://127.0.0.1:5500/About%20Us%20HTML.html">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="http://127.0.0.1:5500/Login%20And%20Registration%20HTML.html">login</a></li>
+                    <li><a href="http://127.0.0.1:5500/Profile%20HTML.html">Profile</a></li>
+
+                    
+                </ul>
+            </div>
+            <div class="icons">
+                <a href="http://127.0.0.1:5500/Wishlist%20HTML.html" class="wishlist-link">
+                    <ion-icon name="heart-outline" class="wishlist"></ion-icon>
+                </a>
+                <a href="http://127.0.0.1:5500/users/templates/users/Shopping%20Cart%20HTML.html" class="cart-link">
+                    <ion-icon name="cart-outline" class="cart"></ion-icon>
+                </a>
+            </div>
+
+           
+    </div>
+
+
+
+
+
+    <header>
+        <h1>My Wishlist</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="cart">
+
+            <div class="products">
+
+                <div class="product">
+                    <img src="./images/atta.jpg" alt="Chakki Fresh Atta">
+                    <div class="product-info">
+                        <h3 class="product-name">Chakki Fresh Atta</h3>
+                        <h4 class="product-price">Rs. 350</h4>
+                        <h4 class="product-offer">50% OFF</h4>
+                        <p class="product-quantity">Qnt: <input value="1" name=""></p>
+                        <p class="product-remove" onclick="removeProduct(this)">
+                            <i class="fas fa-trash-alt"></i>
+                            <span class="remove">Remove</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="./images/maggi.jpg" alt="Maggie">
+                    <div class="product-info">
+                        <h3 class="product-name">Maggie</h3>
+                        <h4 class="product-price">Rs. 10</h4>
+                        <h4 class="product-offer">20% OFF</h4>
+                        <p class="product-quantity">Qnt: <input value="1" name=""></p>
+                        <p class="product-remove" onclick="removeProduct(this)">
+                            <i class="fas fa-trash-alt"></i>
+                            <span class="remove">Remove</span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="cart-total">
+
+                <p>
+                    <span>Total Price</span>
+                    <span>Rs. 183</span>
+                </p>
+                <p>
+                    <span>No. of Items</span>
+                    <span>2</span>
+                </p>
+                <p>
+                    <span>You Save</span>
+                    <span>Rs. 177</span>
+                </p>
+                <a href="Details For Checkout HTML.html">Buy Now</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        function removeProduct(element) {
+            // Add logic to remove the product from the wishlist
+            var product = element.closest('.product');
+            product.remove();
+        }
+    </script>
+
+</body>
+
+</html>

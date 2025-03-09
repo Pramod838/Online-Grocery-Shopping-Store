@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Customer Sign Up</title>
+    <style>
+        body {
+            font-family: Calibri, Helvetica, sans-serif;
+            background-color: rgb(68, 68, 70);
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: rgb(57, 95, 209);
+            text-align: center;
+            padding: 20px;
+            color: white;
+            margin: 0;
+        }
+
+        .container {
+            background-color: rgb(128, 126, 126);
+            width: 80%;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 15px;
+            border: none;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            margin: 8px 0;
+            padding: 12px 20px;
+            display: inline-block;
+            border: 2px solid #333;
+            box-sizing: border-box;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: cornflowerblue;
+        }
+
+        #b1, #b2, #b3 {
+            background-color: cornflowerblue;
+            color: white;
+            padding: 15px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        #b1:hover, #b2:hover, #b3:hover {
+            background-color: mediumblue;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 10px;
+            }
+
+            input[type="text"],
+            input[type="password"] {
+                padding: 10px;
+            }
+
+            .button-container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>New Customer Sign Up</h1>
+    <form>
+        <div class="container">
+            <label>Enter your Name:</label>
+            <input type="text" placeholder="Enter Name" name="Name" required>
+            <label>Enter your Mobile Number:</label>
+            <input type="text" placeholder="Enter Mobile Number" name="Mobile Number" required>
+            <label>Enter your Email id:</label>
+            <input type="text" placeholder="Enter Email id" name="Email id" required>
+            <label>Enter your Address:</label>
+            <input type="text" placeholder="Enter Village" name="Village" required>
+            <label>Enter your Pincode:</label>
+            <input type="text" placeholder="Enter Pincode" name="Pincode" required>
+            <label>Create your password:</label>
+            <input type="password" placeholder="Create your password" name="password" required>
+            <label>Re-enter your password:</label>
+            <input type="password" placeholder="Confirm your password" name="confirmPassword" required>
+            <div class="button-container">
+                <button type="submit" id="b3">Submit</button>
+                <input type="checkbox" checked="checked"> Remember me
+                <button type="button" class="cancelbtn" id="b2">Cancel</button>
+                <button type="button" class="return-home" id="b1" onclick="window.location.href='http://127.0.0.1:5500/Home%20Page%20HTML.html';">Back to Home</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div-container {
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .div {
+            width: 280px;
+            height: 230px;
+            border: 3px whitesmoke;
+            display: inline-block;
+            margin: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+            background-color: white;
+        }
+
+        .div:hover {
+    transform: scale(1.1); /* Increase the size by 10% */
+    box-shadow: 5px 5px 10px rgba(0, 6, 4, 0.6); /* Add a shadow */
+  }
+
+
+        h1 {
+            background-color: blue;
+            margin: 10px;
+            color: white;
+            border: 3px solid black;
+            text-align: center;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        .text-container {
+            background: black;
+            color: white;
+            border-radius: 10px;
+            padding: 5px;
+            border: 2px solid white;
+            position: absolute;
+            bottom: 0;
+            width: 50%;
+            text-align: center;
+            font-size: 16px;
+        }
+
+
+        button.b1:hover {
+            background-color: black;
+            color: white;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        .minus-container,
+        .plus-container {
+            background-color: whitesmoke;
+            color: red;
+            height: 35px;
+            border: 3px solid black;
+            width: 45px;
+            border-radius: 100px;
+            text-align: center;
+            font-size: 35px;
+            font-display: inherit;
+            position: absolute;
+            bottom: 5px;
+            cursor: pointer;
+            transition: transform 0.01s, box-shadow 0.01s;
+        }
+
+        .minus-container:hover,
+        .plus-container:hover {
+            transform: scale(1.08);
+            box-shadow: 0 8px 12px rgba(10, 10, 10, 0.982);
+        }
+
+
+
+        .minus-container {
+            left: 5px;
+        }
+
+        .plus-container {
+            right: 5px;
+        }
+
+        button.b1 {
+            background-color: black;
+            border-color: white;
+            border-radius: 10px;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px;
+        }
+
+        #b10 {
+            background-color: black;
+            border-color: white;
+            border-radius: 25px;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 30px;
+            margin: 80px auto;
+            display: block;
+            background-color: black;
+            width: 40%;
+            color: white;
+            margin: 50px auto;
+            border: none;
+            cursor: pointer;
+        }
+
+        #b10:hover {
+            background-color: bisque;
+            color: red;
+        }
+
+        #div1 {
+            background-image: url("https://cpimg.tistatic.com/03963451/b/4/Yeh-Khila-Yeh-Khila-Regular-Rice.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div2 {
+            background-image: url("https://th.bing.com/th/id/OIP.qkJNpaL0kAfh7KFvZYB3uQHaHa?pid=ImgDet&w=500&h=500&rs=1");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div3 {
+            background-image: url("https://www.lebanesefoodemporium.com.au/media/catalog/product/cache/8464a845b15d3d5a92b1b6004f537b43/b/a/basmati-rice-white-tiger-aaa-5kg_image1.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div4 {
+            background-image: url("https://www.justgotochef.com/img/1524640241-Kohinoor-Authentic%20Basmati%20Rice%20-%20Platinum-1kg-Front%20.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div5 {
+            background-image: url("https://cdn.richcontext.com/media/3352391061-5d40f5fead183ec014a8dd745bd27147.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div6 {
+            background-image: url("https://i0.wp.com/indigrocery.in/wp-content/uploads/2023/02/india-gate-tiber-BMR.jpg?fit=679%2C679&ssl=1");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div7 {
+            background-image: url("https://m.media-amazon.com/images/I/71N0i4TFWVL._SY679_.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div8 {
+            background-image: url("https://th.bing.com/th/id/OIP.XAXinWj-AsME2Zma-8WpigAAAA?pid=ImgDet&w=474&h=474&rs=1");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div9 {
+            background-image: url("https://th.bing.com/th/id/OIP.sSI-w1F9uERHzl5v8suMEgAAAA?pid=ImgDet&w=470&h=470&rs=1");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div10 {
+            background-image: url("https://n1.sdlcdn.com/imgs/b/z/j/Galaxy-1121-Raw-Classic-Basmati-SDL459491339-1-5fdbd.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div11 {
+            background-image: url("https://th.bing.com/th/id/OIP.e6f1Jo-WGduiTO3P-NlufQHaHa?pid=ImgDet&w=1200&h=1200&rs=1");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div12 {
+            background-image: url("https://th.bing.com/th/id/OIP.7OnDWh2RmgPoINgyerFNYwHaHa?pid=ImgDet&w=600&h=600&rs=1");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div13 {
+            background-image: url("https://img2.exportersindia.com/product_images/bc-full/dir_138/4124184/pansari-mahak-basmati-rice-10kg-pack-of-4-pcs-1489820177-2765217.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div14 {
+            background-image: url("https://th.bing.com/th/id/OIP.1kTdRLYWg2JOejWKeOHjOAHaKv?pid=ImgDet&w=600&h=870&rs=1");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div15 {
+            background-image: url("https://5.imimg.com/data5/RM/WJ/BI/ANDROID-18001918/product-jpeg-250x250.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div16 {
+            background-image: url("https://static-s3.supermart.ng/productImage/spcgri558_trs_basmati_rice_500_g.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div17 {
+            background-image: url("https://i5.walmartimages.com/asr/c408f60f-1443-4934-b825-3bb56deb6dd7.7431524b9297adf520de591c2509f5f2.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div18 {
+            background-image: url("https://static.wixstatic.com/media/7062f1_e66e50879d4d4197a05802c84b934f40~mv2.jpg/v1/fill/w_498,h_704,al_c,q_85,usm_0.66_1.00_0.01/7062f1_e66e50879d4d4197a05802c84b934f40~mv2.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div19 {
+            background-image: url("https://m.media-amazon.com/images/I/61uwUc-gpBL.SX679.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div20 {
+            background-image: url("https://th.bing.com/th/id/OIP.e6f1Jo-WGduiTO3P-NlufQHaHa?pid=ImgDet&w=1200&h=1200&rs=1");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div21 {
+            background-image: url("https://th.bing.com/th/id/OIP.2BfnlnzniD_WxB6TsYRudQHaHa?pid=ImgDet&w=480&h=480&rs=1");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div22 {
+            background-image: url("https://www.bigbasket.com/media/uploads/p/l/40255831_1-pansari-mahakmogra-basmati-rice-with-vitamin-b1-b2-iron-royal-taste.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div23 {
+            background-image: url("https://lzd-img-global.slatic.net/g/ff/kf/S9353d089d76e4d4889c68376fe26bb95V.jpg_720x720q80.jpg_.webp");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div24 {
+            background-image: url("https://www.kesargrocery.com/images/P/laxmi-brown-basmati-rice.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="try.css">
+    <style>
+        body {
+            background-color:  #f4f3ef;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+          <div class="icon">
+            <a href="http://127.0.0.1:5500/Home%20Page%20HTML.html">
+                <h2 class="logo">AapnaKirana</h2>
+            </div>
+    <div class="main">
+        <div class="navbar">
+            <div class="menu">
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/Home%20Page%20HTML.html">HOME</a></li>
+                    <li><a href="http://127.0.0.1:5500/About%20Us%20HTML.html">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="http://127.0.0.1:5500/Login%20And%20Registration%20HTML.html">login</a></li>
+                    <li><a href="http://127.0.0.1:5500/Profile%20HTML.html">Profile</a></li>
+
+                    
+                </ul>
+            </div>
+            <div class="icons">
+                <a href="http://127.0.0.1:5500/Wishlist%20HTML.html" class="wishlist-link">
+                    <ion-icon name="heart-outline" class="wishlist"></ion-icon>
+                </a>
+                <a href="http://127.0.0.1:5500/users/templates/users/Shopping%20Cart%20HTML.html" class="cart-link">
+                    <ion-icon name="cart-outline" class="cart"></ion-icon>
+                </a>
+            </div>
+
+           
+    </div>
+
+
+
+
+
+        
+
+    </div>
+        <th><a href="Spices.html"> <button class="b1">Spice</button> </th></a>
+        <th> <a href="Fruits Category Page HTML.html"><button class="b1">Fruits</button> </th></a>
+         <th> <a href="Snacks.html"><button class="b1">Snacks</button> </th></a>
+          <th> <a href="Oil.html.html"><button class="b1">oil & Ghee</button> </th></a>
+         <th> <a href="Biscuits.html"><button class="b1">Biscuits</button> </th></a>
+          <th><a href="Cleaners.html"> <button class="b1">Cleaners</button> </th></a>
+         <th> <a href="Vegetables.html.html"><button class="b1">Vegetables</button> </th></a>
+       
+        <div class="search">
+            <input class="srch" id="search-input" type="search" name="" placeholder="Type To Search">
+            <button class="btn" id="search-button">Search</button>
+        </div>
+        <div class="image-slides">
+            <div class="image fade">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/ZXPL4819-ZXPL4814-25oct23.jpg?tr=w-2048,q=80" alt="Mountain Top">
+            </div>
+            <div class="image fade">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/ZXPL4821-ZXPL4820-ZXPL4815-ZXPL4811-25oct23.jpg?tr=w-2048,q=80" alt="Palm Trees">
+            </div>
+            <div class="image fade">
+                <img src="https://scontent.fhbx2-1.fna.fbcdn.net/v/t31.18172-8/28701280_1604559542992642_6525377413069735813_o.jpg?_nc_cat=110&ccb=1-7&_nc_sid=7f8c78&_nc_ohc=8v-nNxTZBs0AX_-fhNR&_nc_ht=scontent.fhbx2-1.fna&oh=00_AfDHEhhPODDBQZtSzLYEEb1bekPDKCZd8InoXllRpR0bPA&oe=65754D93" alt="Neon Sign">
+            </div>
+        </div>
+        <script src="try.js"></script>
+        
+          <script src="try.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function ()
+         {
+            const searchInput = document.getElementById("search-input");
+            const searchButton = document.getElementById("search-button");
+            const products = document.querySelectorAll(".product");
+
+            searchButton.addEventListener("click", function () {
+                const searchTerm = searchInput.value.toLowerCase();
+
+                products.forEach(function (product) {
+                    const productTitle = product.querySelector("h3").textContent.toLowerCase();
+                    if (productTitle.includes(searchTerm)) {
+                        product.style.display = "block";
+                    } else {
+                        product.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+    </head>
+
+    <div class="div-container">
+        <div class="div" id="div1">
+            <div class="minus-container">-</div>
+            <div class="plus-container">+</div>
+            <div class="text-container">
+                <div class="text">Khila-Khila
+                    <br>1000/30 kg;
+                </div>
+            </div>
+        </div>
+
+        <div class="div" id="div2">
+            <div class="minus-container">-</div>
+            <div class="plus-container">+</div>
+            <div class="text-container">Ajwa Basmati
+                <br>900/25 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div3">
+            <div class="minus-container">-</div>
+            <div class="plus-container">+</div>
+            <div class="text-container">White Tiger
+                <br>1100/30 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div4">
+            <div class="minus-container">-</div>
+            <div class="plus-container">+</div>
+            <div class="text-container">Kohinoor Basmati
+                <br>1200/20 kg;
+            </div>
+        </div>
+    </div>
+
+    <div class="div-container">
+        <div class="div-container">
+            <div class="div" id="div5">
+                <div class="minus-container">-</div>
+                <div class="plus-container">+</div>
+                <div class="text-container">Royal Masoori
+                    <br>1400/30 kg;
+                </div>
+            </div>
+
+            <div class="div" id="div6">
+                <div class="minus-container">-</div>
+                <div class="plus-container">+</div>
+                <div class="text-container">India Gate
+                    <br>2000/20 kg;
+                </div>
+            </div>
+
+            <div class="div" id="div7">
+                <div class="minus-container">-</div>
+                <div class="plus-container">+</div>
+                <div class="text-container">Classic
+                    <br>1600/30 kg;
+                </div>
+            </div>
+
+            <div class="div" id="div8">
+                <div class="minus-container">-</div>
+                <div class="plus-container">+</div>
+                <div class="text-container">Sher Basmaati
+                    <br>1500/30 kg;
+                </div>
+            </div>
+        </div>
+
+        <div class="div-container">
+            <div class="div" id="div9">
+                <div class="minus-container">-</div>
+                <div class="plus-container">+</div>
+                <div class="text-container">Khazana Basmati
+                    <br>1800/20 kg;
+                </div>
+            </div>
+
+            <div class="div" id="div10">
+                <div class="minus-container">-</div>
+                <div class="plus-container">+</div>
+                <div class="text-container">Galaxy classic
+                    <br>1000/10 kg;
+                </div>
+            </div>
+
+            <div class="div" id="div11">
+                <div class="minus-container">-</div>
+                <div class="plus-container">+</div>
+                <div class="text-container">Taj Basmati
+                    <br>1000/30 kg;
+                </div>
+            </div>
+
+            <div class="div" id="div12">
+                <div class="minus-container">-</div>
+                <div class="plus-container">+</div>
+                <div class="text-container">Reserve Basmati
+                    <br>1000/30 kg;
+                </div>
+            </div>
+        </div>
+        <div class="div-container">
+            <div class="div" id="div13">
+                <div class="minus-container">-</div>
+                <div class="plus-container">+</div>
+                <div class="text-container">PansariBasmati
+                    <br>1800/20 kg;
+                </div>
+            </div>
+
+            <div class="div" id="div14">
+                <div class="minus-container">-</div>
+                <div class="plus-container">+</div>
+                <div class="text-container">Sarbani Basmati
+                    <br>1000/10 kg;
+                </div>
+            </div>
+
+            <div class="div" id="div15">
+                <div class="minus-container">-</div>
+                <div class="plus-container">+</div>
+                <div class="text-container">Sardar Basmati
+                    <br>1000/30 kg;
+                </div>
+            </div>
+
+            <div class="div" id="div16">
+                <div class="minus-container">-</div>
+                <div class="plus-container">+</div>
+                <div class="text-container">TKS Basmati
+                    <br>1000/30 kg;
+                </div>
+            </div>
+        </div>
+        <div class="div-container">
+            <div class="div" id="div17">
+                <div class="minus-container">-</div>
+                <div class="plus-container">+</div>
+                <div class=" text-container">Royal Basmati
+                    <br>1800/20 kg;
+                </div>
+            </div>
+
+            <div class="div" id="div18">
+                <div class="minus-container">-</div>
+                <div class="plus-container">+</div>
+                <div class="text-container">Shahi Basmati
+                    <br>1000/10 kg;
+                </div>
+            </div>
+
+            <div class="div" id="div19">
+                <div class="minus-container">-</div>
+                <div class="plus-container">+</div>
+                <div class="text-container">Kohinoor Basmati
+                    <br>1000/30 kg;
+                </div>
+            </div>
+
+            <div class="div" id="div20">
+                <div class="minus-container">-</div>
+                <div class="plus-container">+</div>
+                <div class="text-container">Taj Basmati
+                    <br>1000/30 kg;
+                </div>
+            </div>
+        </div>
+        <div class="div-container">
+            <div class="div" id="div21">
+                <div class="minus-container">-</div>
+                <div class="plus-container">+</div>
+                <div class="text-container">Pearl Basmati
+                    <br>1800/20 kg;
+                </div>
+            </div>
+
+            <div class="div" id="div22">
+                <div class="minus-container">-</div>
+                <div class="plus-container">+</div>
+                <div class="text-container">Pansari Basmati
+                    <br>1000/10 kg;
+                </div>
+            </div>
+
+            <div class="div" id="div23">
+                <div class="minus-container">-</div>
+                <div class="plus-container">+</div>
+                <div class="text-container">Jordan Basmati
+                    <br>1000/30 kg;
+                </div>
+            </div>
+
+            <div class="div" id="div24">
+                <div class="minus-container">-</div>
+                <div class="plus-container">+</div>
+                <div class="text-container">Lakshmi Basmati
+                    <br>1000/30 kg;
+                </div>
+            </div>
+        </div>
+        <button type="button" id="b10" onclick="window.location.href='Home Page HTML.html';">Back to
+            Home</button>
+
+
+            <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div-container {
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .div {
+            width: 280px;
+            height: 210px;
+            border: 3px solid red;
+            display: inline-block;
+            margin: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+        }
+
+        .minus-container,
+        .plus-container {
+            background-color: whitesmoke;
+            color: red;
+            height: 35px;
+            border: 3px solid black;
+            width: 45px;
+            border-radius: 100px;
+            text-align: center;
+            font-size: 35px;
+            font-display: inherit;
+            position: absolute;
+            bottom: 5px;
+            cursor: pointer;
+            transition: transform 0.01s, box-shadow 0.01s;
+        }
+
+        .minus-container:hover,
+        .plus-container:hover {
+            transform: scale(1.08);
+            box-shadow: 0 8px 12px rgba(10, 10, 10, 0.982);
+        }
+
+
+
+        .minus-container {
+            left: 5px;
+        }
+
+        .plus-container {
+            right: 5px;
+        }
+        button.b1:hover {
+            background-color: black;
+            color: white;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        h1 {
+            background-color: blue;
+            margin: 10px;
+            color: white;
+            border: 3px solid black;
+            text-align: center;
+            padding: 10px;
+            font: 50px;
+        }
+
+        .text-container {
+            background: black;
+            color: white;
+            border-radius: 10px;
+            padding: 5px;
+            border: 2px solid white;
+            position: absolute;
+            bottom: 0;
+            width: 50%;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        #b1 {
+            display: block;
+            background-color: black;
+            width: 40%;
+            color: white;
+
+
+            padding: 15px;
+            margin: 10px auto;
+            border: none;
+            cursor: pointer;
+        }
+
+        button.b1 {
+            background-color: black;
+            border-color: white;
+            border-radius: 15px;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px;
+        }
+
+        #div1 {
+            background-image: url("https://www.rajbhog.com/wp-content/uploads/2020/12/Moong-Dal-870x635.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div2 {
+            background-image: url("https://th.bing.com/th/id/R.1c9a1e787cd9bf5b856afdf470913b21?rik=shBiiwCpdgh%2fkw&riu=http%3a%2f%2fcdn.shopify.com%2fs%2ffiles%2f1%2f0251%2f6942%2f8589%2fproducts%2fimage_2de68545-5b93-4ec9-9328-b5018ab5a686_1200x1200.jpg%3fv%3d1596652186&ehk=Ns7w4wWUtsos86OdQ1YC3jX5xxsC33SEf0KOfDyJc%2bA%3d&risl=&pid=ImgRaw&r=0");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div3 {
+            background-image: url("https://wp-public-fs.s3.ap-south-1.amazonaws.com/tasks/15f1ec145f1df0cc89e5302e6224a64d0b6d2c25aac516/images/1_7dgxzdjlczonhykc-_k5pq-5f22bef7d54cf.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div4 {
+            background-image: url("https://mothercart.in/wp-content/uploads/2019/10/toor-dal-768x599.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div5 {
+            background-image: url("https://www.wellcurve.in/blog/wp-content/uploads/2021/12/Red-lentils.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div6 {
+            background-image: url("https://www.wellcurve.in/blog/wp-content/uploads/2021/12/Split-Bengal-Gram.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div7 {
+            background-image: url("https://www.wellcurve.in/blog/wp-content/uploads/2021/12/Black-Gram.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div8 {
+            background-image: url("https://www.wellcurve.in/blog/wp-content/uploads/2021/12/Yellow-Pigeon-peas.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div9 {
+            background-image: url("https://www.wellcurve.in/blog/wp-content/uploads/2021/12/Green-gram.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div10 {
+            background-image: url("https://www.wellcurve.in/blog/wp-content/uploads/2021/12/Chickpea.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div11 {
+            background-image: url("https://www.wellcurve.in/blog/wp-content/uploads/2021/12/Horse-Gram.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div12 {
+            background-image: url("https://www.wellcurve.in/blog/wp-content/uploads/2021/12/Green-Pigeon-Peas.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div13 {
+            background-image: url("https://www.wellcurve.in/blog/wp-content/uploads/2021/12/Lentis.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div14 {
+            background-image: url("https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_150,h_150/https://www.myweekendkitchen.in/wp-content/uploads/2020/04/split_black_gram_urad_dal_chilka_types_of_lentils_list_in_english_hindi-1.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div15 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqlYm1XuZ8yycK_1-rhCpNUWVVSnotBrpx2w&usqp=CAU");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div16 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpdl1p-a7LY_O0qu2LZzG9HcUZyf3cOYE6ag&usqp=CAU");
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Pulses
+    </h1>
+    <th>
+        <a href="Home Page HTML.html">
+            <button class="b1">Home</button>
+        </a>
+    </th>
+    <th><a href="Spices.html"> <button class="b1">Spice</button> </th></a>
+    <th> <a href="Fruits Category Page HTML.html"><button class="b1">Fruits</button> </th></a>
+     <th> <a href="Snacks.html"><button class="b1">Snacks</button> </th></a>
+      <th> <a href="Oil.html.html"><button class="b1">oil & Ghee</button> </th></a>
+     <th> <a href="Biscuits.html"><button class="b1">Biscuits</button> </th></a>
+      <th><a href="Cleaners.html"> <button class="b1">Cleaners</button> </th></a>
+     <th> <a href="Vegetables.html.html"><button class="b1">Vegetables</button> </th></a>
+
+
+
+    <th> <a href=" WIshlist HTML.html"><button class="b1">My order</button> </th></a>
+    <th> <a href="Shopping Cart HTML.html"><button class="b1">My Cart</button> </th></a>
+
+
+    <div class="div-container">
+        <div class="div" id="div1">
+            <div class="minus-container">-</div>
+            <div class="plus-container">+</div>
+            <div class="text-container">Chana Dal
+                <br>1000/30 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div2">
+            <div class="minus-container">-</div>
+            <div class="plus-container">+</div>
+            <div class="text-container">Masoor Dal
+                <br>900/25 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div3">
+            <div class="minus-container">-</div>
+            <div class="plus-container">+</div>
+            <div class="text-container">Chana Dal
+                <br>1100/30 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div4">
+            <div class="minus-container">-</div>
+            <div class="plus-container">+</div>
+            <div class="text-container">Toor Dal
+                <br>1200/20 kg;
+            </div>
+        </div>
+    </div>
+
+    <div class="div-container">
+        <div class="div" id="div5">
+            <div class="minus-container">-</div>
+            <div class="plus-container">+</div>
+            <div class="text-container">Masoor Dal
+                <br>1400/30 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div6">
+            <div class="minus-container">-</div>
+            <div class="plus-container">+</div>
+            <div class="text-container">Chana Dal
+                <br>2000/20 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div7">
+            <div class="minus-container">-</div>
+            <div class="plus-container">+</div>
+            <div class="text-container">Urad dal
+                <br>600/30 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div8">
+            <div class="minus-container">-</div>
+            <div class="plus-container">+</div>
+            <div class="text-container">Tur Dal
+                <br>1500/30 kg;
+            </div>
+        </div>
+    </div>
+
+    <div class="div-container">
+        <div class="div" id="div9">
+            <div class="minus-container">-</div>
+            <div class="plus-container">+</div>
+            <div class="text-container">Moong Dal
+                <br>1800/20 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div10">
+            <div class="minus-container">-</div>
+            <div class="plus-container">+</div>
+            <div class="text-container">Chole
+                <br>1000/10 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div11">
+            <div class="minus-container">-</div>
+            <div class="plus-container">+</div>
+            <div class="text-container">Kulthi dal
+                <br>1000/30 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div12">
+            <div class="minus-container">-</div>
+            <div class="plus-container">+</div>
+            <div class="text-container">Hare Tuvar dal
+                <br>1000/30 kg;
+            </div>
+        </div>
+    </div>
+    <div class="div-container">
+        <div class="div" id="div13">
+            <div class="minus-container">-</div>
+            <div class="plus-container">+</div>
+            <div class="text-container">White Urad Dal
+                <br>1800/20 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div14">
+            <div class="minus-container">-</div>
+            <div class="plus-container">+</div>
+            <div class="text-container">Ripuraj Sonam
+                <br>1000/10 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div15">
+            <div class="minus-container">-</div>
+            <div class="plus-container">+</div>
+            <div class="text-container">Premium Mix Dal
+                <br>1000/30 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div16">
+            <div class="minus-container">-</div>
+            <div class="plus-container">+</div>
+            <div class="text-container">Rajma Beans
+                <br>1000/30 kg;
+            </div>
+        </div>
+
+        <button type="button" class="return-home" id="b1"
+            onclick="window.location.href='Home Page HTML.html';">Back to Home</button>
+
+</body>
+
+</html>

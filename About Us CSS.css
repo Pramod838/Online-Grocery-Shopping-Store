@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to right, #3388ff, #0077b6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.content-section {
+    width: 100%;
+}
+
+.image-section {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.content-section .title {
+    text-transform: uppercase;
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.content-section .content h3 {
+    color: #fff;
+    font-size: 19px;
+    margin-top: 20px;
+}
+
+.content-section .content p {
+    color: #fff;
+    font-size: 17px;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.content-section .content .button {
+    margin-top: 30px;
+}
+
+.content-section .content .button a {
+    background-color: #0077b6;
+    padding: 12px 40px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.content-section .content .button a:hover {
+    background-color: #004466;
+}
+
+.content-section .social {
+    margin: 40px 0;
+}
+
+.content-section .social i {
+    color: #fff;
+    font-size: 30px;
+    padding: 0px 10px;
+    transition: color 0.4s;
+    cursor: pointer;
+}
+
+.content-section .social i:hover {
+    color: #ffcc33;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding-top: 20px;
+    }
+
+    .content-section .title {
+        font-size: 24px;
+    }
+
+    .content-section .content .button a {
+        padding: 10px 30px;
+        font-size: 22px;
+    }
+}
+
+.container .back-to-home {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.container .back-to-home a {
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+.container .back-to-home a:hover {
+    letter-spacing: 2px;
+    opacity: 0.8;
+}

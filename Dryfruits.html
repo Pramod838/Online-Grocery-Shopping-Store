@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div-container {
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .div {
+            width: 280px;
+            height: 230px;
+            border: 3px whitesmoke;
+            display: inline-block;
+            margin: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); 
+            background-color: white; 
+        }
+        
+        h1 {
+            background-color: blue;
+            margin: 10px;
+            color: white;
+            border: 3px solid black;
+            text-align: center;
+            padding: 10px;
+            font-size: 20px; 
+        }
+        
+        .text-container {
+            background: black;
+            color: white;
+            border-radius: 10px;
+            padding: 5px;
+            border: 2px solid white;
+            position: absolute;
+            bottom: 0;
+            width: 50%;
+            text-align: center;
+            font-size: 16px;
+        }
+        
+        .minus-container,
+        .plus-container {
+            background-color: whitesmoke;
+            color: red;
+            height: 35px;
+            border: 3px solid black;
+            width: 45px;
+            border-radius: 100px;
+            text-align: center;
+            font-size: 35px;
+            font-display: inherit;
+            position: absolute;
+            bottom: 5px;
+            cursor: pointer;
+            transition: transform 0.01s, box-shadow 0.01s;
+        }
+
+        .minus-container:hover,
+        .plus-container:hover {
+            transform: scale(1.08);
+            box-shadow: 0 8px 12px rgba(10, 10, 10, 0.982);
+        }
+
+
+
+        .minus-container {
+            left: 5px;
+        }
+
+        .plus-container {
+            right: 5px;
+        }
+        #b1 {
+            display: block;
+            background-color:black;
+            width: 40%;
+            color:white;
+        
+            
+            padding: 15px;
+            margin: 10px auto;
+            border: none;
+            cursor: pointer;
+        }
+        
+        button.b1{
+            background-color: black;
+            border-color: white;
+            border-radius: 15px;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px;
+        }
+        button.b1:hover {
+            background-color: cornflowerblue;
+            color: white;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        .search-container {
+            position: fixed;
+            top: 50%;
+            right: 50px;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid black;
+            margin-left: 10px;
+        }
+
+        .search-button {
+            padding: 10px;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+
+        .search-button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        
+
+
+        #b10 {
+            background-color: black;
+            border-color: white;
+            border-radius: 25px;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 30px;
+            margin: 80px auto;
+            display: block;
+            background-color: black;
+            width: 40%;
+            color: white;
+            margin: 50px auto;
+            border: none;
+            cursor: pointer;
+        }
+
+        #div1 {
+            background-image: url("https://adda247jobs-wp-assets-adda247.s3.ap-south-1.amazonaws.com/jobs/wp-content/uploads/sites/2/2022/09/29120429/images-18.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div2 {
+            background-image: url("https://adda247jobs-wp-assets-adda247.s3.ap-south-1.amazonaws.com/jobs/wp-content/uploads/sites/2/2022/09/29120427/images-1-3-300x199.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div3 {
+            background-image: url("https://adda247jobs-wp-assets-adda247.s3.ap-south-1.amazonaws.com/jobs/wp-content/uploads/sites/2/2022/09/29120421/images-5-2-300x168.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div4 {
+            background-image: url("https://adda247jobs-wp-assets-adda247.s3.ap-south-1.amazonaws.com/jobs/wp-content/uploads/sites/2/2022/09/29120419/images-6-1-1-300x300.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div5 {
+            background-image: url("https://adda247jobs-wp-assets-adda247.s3.ap-south-1.amazonaws.com/jobs/wp-content/uploads/sites/2/2022/09/29120413/images-7-2-300x225.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div6 {
+            background-image: url("https://adda247jobs-wp-assets-adda247.s3.ap-south-1.amazonaws.com/jobs/wp-content/uploads/sites/2/2022/09/29120410/images-8-3-300x180.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div7 {
+            background-image: url("https://adda247jobs-wp-assets-adda247.s3.ap-south-1.amazonaws.com/jobs/wp-content/uploads/sites/2/2022/09/29120402/images-10-1-300x200.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div8 {
+            background-image: url("https://adda247jobs-wp-assets-adda247.s3.ap-south-1.amazonaws.com/jobs/wp-content/uploads/sites/2/2022/09/29120351/images-16-1-300x200.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div9 {
+            background-image: url("https://adda247jobs-wp-assets-adda247.s3.ap-south-1.amazonaws.com/jobs/wp-content/uploads/sites/2/2022/09/29120349/images-17-1-300x193.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div10 {
+            background-image: url("https://adda247jobs-wp-assets-adda247.s3.ap-south-1.amazonaws.com/jobs/wp-content/uploads/sites/2/2022/09/29120348/images-18-1-300x300.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div11 {
+            background-image: url("https://adda247jobs-wp-assets-adda247.s3.ap-south-1.amazonaws.com/jobs/wp-content/uploads/sites/2/2022/09/29120346/images-19-1-300x225.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div12 {
+            background-image: url("https://adda247jobs-wp-assets-adda247.s3.ap-south-1.amazonaws.com/jobs/wp-content/uploads/sites/2/2022/09/29120345/images-20-1-300x212.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div13 {
+            background-image: url("https://adda247jobs-wp-assets-adda247.s3.ap-south-1.amazonaws.com/jobs/wp-content/uploads/sites/2/2022/09/29120343/download-2.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div14 {
+            background-image: url("https://adda247jobs-wp-assets-adda247.s3.ap-south-1.amazonaws.com/jobs/wp-content/uploads/sites/2/2022/09/29120341/images-21-1-300x215.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div15 {
+            background-image: url("https://i0.wp.com/howtamil.com/wp-content/uploads/2022/02/celery-4637439_640.jpg?w=1200&ssl=1");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div16 {
+            background-image: url("https://adda247jobs-wp-assets-adda247.s3.ap-south-1.amazonaws.com/jobs/wp-content/uploads/sites/2/2022/09/29120338/images-23-1-300x200.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div17 {
+            background-image: url("https://adda247jobs-wp-assets-adda247.s3.ap-south-1.amazonaws.com/jobs/wp-content/uploads/sites/2/2022/09/29120337/images-24-1-300x300.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div18 {
+            background-image: url("https://adda247jobs-wp-assets-adda247.s3.ap-south-1.amazonaws.com/jobs/wp-content/uploads/sites/2/2022/09/29120406/images-9-2-300x300.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div19 {
+            background-image: url("https://adda247jobs-wp-assets-adda247.s3.ap-south-1.amazonaws.com/jobs/wp-content/uploads/sites/2/2022/09/29120400/images-11-2-300x300.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div20 {
+            background-image: url("https://adda247jobs-wp-assets-adda247.s3.ap-south-1.amazonaws.com/jobs/wp-content/uploads/sites/2/2022/09/29120358/images-12-1-300x300.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div21 {
+            background-image: url("https://adda247jobs-wp-assets-adda247.s3.ap-south-1.amazonaws.com/jobs/wp-content/uploads/sites/2/2022/09/29120356/images-13-2-300x300.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div22 {
+            background-image: url("https://adda247jobs-wp-assets-adda247.s3.ap-south-1.amazonaws.com/jobs/wp-content/uploads/sites/2/2022/09/29120354/images-14-2-300x300.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div23 {
+            background-image: url("https://adda247jobs-wp-assets-adda247.s3.ap-south-1.amazonaws.com/jobs/wp-content/uploads/sites/2/2022/09/29120353/images-15-2-300x300.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div24 {
+            background-image: url("https://cdn.shopify.com/s/files/1/0269/8258/0311/files/Untitled_900_x_600_px_22_480x480.png?v=1680341911");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div25 {
+            background-image: url("https://cdn.shopify.com/s/files/1/0269/8258/0311/files/Untitled_900_x_600_px_23_480x480.png?v=1680341948");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div26 {
+            background-image: url("https://www.kashmirica.com/shop/ajwa-dates/");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div27 {
+            background-image: url("https://www.worldatlas.com/r/w768/upload/9f/f6/4a/shutterstock-779304208.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div28 {
+            background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/prune-health-benefits-1613680106.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        #div29 {
+            background-image: url("https://www.kashmirica.com/wp-content/uploads/2020/07/Untitled-design11-300x300.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        
+    </style>
+
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="try.css">
+    <style>
+        body {
+            background-color:  #f4f3ef;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+          <div class="icon">
+            <a href="http://127.0.0.1:5500/Home%20Page%20HTML.html">
+                <h2 class="logo">AapnaKirana</h2>
+            </div>
+    <div class="main">
+        <div class="navbar">
+            <div class="menu">
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/Home%20Page%20HTML.html">HOME</a></li>
+                    <li><a href="http://127.0.0.1:5500/About%20Us%20HTML.html">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="http://127.0.0.1:5500/Login%20And%20Registration%20HTML.html">login</a></li>
+                    <li><a href="http://127.0.0.1:5500/Profile%20HTML.html">Profile</a></li>
+
+                    
+                </ul>
+            </div>
+            <div class="icons">
+                <a href="http://127.0.0.1:5500/Wishlist%20HTML.html" class="wishlist-link">
+                    <ion-icon name="heart-outline" class="wishlist"></ion-icon>
+                </a>
+                <a href="http://127.0.0.1:5500/users/templates/users/Shopping%20Cart%20HTML.html" class="cart-link">
+                    <ion-icon name="cart-outline" class="cart"></ion-icon>
+                </a>
+            </div>
+
+           
+    </div>
+
+
+
+
+
+        
+
+    </div>
+        <th><a href="Spices.html"> <button class="b1">Spice</button> </th></a>
+        <th> <a href="Fruits Category Page HTML.html"><button class="b1">Fruits</button> </th></a>
+         <th> <a href="Snacks.html"><button class="b1">Snacks</button> </th></a>
+          <th> <a href="Oil.html.html"><button class="b1">oil & Ghee</button> </th></a>
+         <th> <a href="Biscuits.html"><button class="b1">Biscuits</button> </th></a>
+          <th><a href="Cleaners.html"> <button class="b1">Cleaners</button> </th></a>
+         <th> <a href="Vegetables.html.html"><button class="b1">Vegetables</button> </th></a>
+       
+        <div class="search">
+            <input class="srch" id="search-input" type="search" name="" placeholder="Type To Search">
+            <button class="btn" id="search-button">Search</button>
+        </div>
+        <div class="image-slides">
+            <div class="image fade">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/ZXPL24546-1200x300-271023-all.jpg?tr=w-2048,q=80" alt="Mountain Top">
+            </div>
+            <div class="image fade">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/ZXNP10018-15oct23.jpg?tr=w-2048,q=80" alt="Palm Trees">
+            </div>
+            <div class="image fade">
+                <img src="https://www.haldirams.com/media/catalog/tmp/category/dy_fruit.jpg" alt="Neon Sign">
+            </div>
+        </div>
+        <script src="try.js"></script>
+        
+          <script src="try.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function ()
+         {
+            const searchInput = document.getElementById("search-input");
+            const searchButton = document.getElementById("search-button");
+            const products = document.querySelectorAll(".product");
+
+            searchButton.addEventListener("click", function () {
+                const searchTerm = searchInput.value.toLowerCase();
+
+                products.forEach(function (product) {
+                    const productTitle = product.querySelector("h3").textContent.toLowerCase();
+                    if (productTitle.includes(searchTerm)) {
+                        product.style.display = "block";
+                    } else {
+                        product.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+    </head>
+
+
+    
+    <div class="div-container">
+        <div class="div" id="div1"><div class="minus-container">-</div>
+        <div class="plus-container">+</div>
+            <div class="text-container"> Almond
+                <br>1000/30 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div2"><div class="minus-container">-</div>
+        <div class="plus-container">+</div>
+            <div class="text-container">Apricot
+                <br>900/25 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div3"><div class="minus-container">-</div>
+        <div class="plus-container">+</div>
+            <div class="text-container">Cashew Nut
+                <br>1100/30 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div4"><div class="minus-container">-</div>
+        <div class="plus-container">+</div>
+            <div class="text-container">Charoli
+                <br>1200/20 kg;
+            </div>
+        </div>
+    </div>
+
+    <div class="div-container">
+        <div class="div" id="div5"><div class="minus-container">-</div>
+        <div class="plus-container">+</div>
+            <div class="text-container">Chesrnut
+                <br>1400/30 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div6"><div class="minus-container">-</div>
+        <div class="plus-container">+</div>
+            <div class="text-container">Coconut
+                <br>2000/20 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div7"><div class="minus-container">-</div>
+        <div class="plus-container">+</div>
+            <div class="text-container">Dates
+                <br>1600/30 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div8"><div class="minus-container">-</div>
+        <div class="plus-container">+</div>
+            <div class="text-container">Pine Nut
+                <br>1500/30 kg;
+            </div>
+        </div>
+    </div>
+
+    <div class="div-container">
+        <div class="div" id="div9"><div class="minus-container">-</div>
+        <div class="plus-container">+</div>
+            <div class="text-container">Pistachio
+                <br>1800/20 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div10"><div class="minus-container">-</div>
+        <div class="plus-container">+</div>
+            <div class="text-container">Poppy Seeds
+                <br>1000/10 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div11"><div class="minus-container">-</div>
+        <div class="plus-container">+</div>
+            <div class="text-container">Prunes
+                <br>1000/30 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div12"><div class="minus-container">-</div>
+        <div class="plus-container">+</div>
+            <div class="text-container">Pumpkin Seeds
+                <br>1000/30 kg;
+            </div>
+        </div>
+    </div>
+    <div class="div-container">
+        <div class="div" id="div13"><div class="minus-container">-</div>
+        <div class="plus-container">+</div>
+            <div class="text-container">Raisin
+                <br>1800/20 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div14"><div class="minus-container">-</div>
+        <div class="plus-container">+</div>
+            <div class="text-container">Saffron
+                <br>1000/10 kg;Kesar
+            </div>
+        </div>
+
+        <div class="div" id="div15"><div class="minus-container">-</div>
+        <div class="plus-container">+</div>
+            <div class="text-container"> Sesame Seeds
+                <br>1000/30 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div16"><div class="minus-container">-</div>
+        <div class="plus-container">+</div>
+            <div class="text-container">Walnut
+                <br>1000/30 kg;
+            </div>
+        </div>
+    </div>
+    <div class="div-container">
+        <div class="div" id="div17"><div class="minus-container">-</div>
+        <div class="plus-container">+</div>
+            <div class=" text-container">Watermelon Seeds
+            <br>1800/20 kg;
+        </div>
+     </div>
+
+     <div class="div" id="div18"><div class="minus-container">-</div>
+     <div class="plus-container">+</div>
+        <div class="text-container">Cudpahnut
+            <br>1000/10 kg;
+        </div>
+     </div>
+
+     <div class="div" id="div19"><div class="minus-container">-</div>
+     <div class="plus-container">+</div>
+        <div class="text-container">Fennel
+            <br>1000/30 kg;
+        </div>
+     </div>
+
+     <div class="div" id="div20"><div class="minus-container">-</div>
+     <div class="plus-container">+</div>
+        <div class="text-container">Fig
+            <br>1000/30 kg;
+        </div>
+    </div>
+    </div>
+    <div class="div-container">
+        <div class="div" id="div21"><div class="minus-container">-</div>
+        <div class="plus-container">+</div>
+            <div class="text-container">Flax seed
+                <br>1800/20 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div22"><div class="minus-container">-</div>
+        <div class="plus-container">+</div>
+            <div class="text-container">Fox Nuts
+                <br>1000/10 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div23"><div class="minus-container">-</div>
+        <div class="plus-container">+</div>
+            <div class="text-container">Groundnut(Peanuts)
+                <br>1000/30 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div24"><div class="minus-container">-</div>
+        <div class="plus-container">+</div>
+            <div class="text-container">Dry Figs - Anjeer
+                <br>1000/30 kg;
+            </div>
+        </div>
+
+        <div class="div" id="div25"><div class="minus-container">-</div>
+        <div class="plus-container">+</div>
+            <div class="text-container">Dry Berries
+                <br>1000/30 kg;
+            </div>
+        </div>
+        
+        
+    
+            <div class="div" id="div27"><div class="minus-container">-</div>
+            <div class="plus-container">+</div>
+                <div class="text-container">Hazelnuts
+                    <br>1000/10 kg;
+                </div>
+            </div>
+    
+            <div class="div" id="div28"><div class="minus-container">-</div>
+            <div class="plus-container">+</div>
+                <div class="text-container">Prunes
+                    <br>1000/30 kg;
+                </div>
+            </div>
+    
+            <div class="div" id="div29"><div class="minus-container">-</div>
+            <div class="plus-container">+</div>
+                <div class="text-container">Dry Figs
+                    <br>1000/10 kg;Kesar
+                </div>
+            </div>
+    
+    </div>
+    <button type="button" class="return-home" id="b10" onclick="window.location.href='Home Page HTML.html';">Back to Home</button>
+
+    <script>
+        const searchInput = document.getElementById("search-input");
+        const searchButton = document.getElementById("search-button");
+
+        searchButton.addEventListener("click", function () {
+            const searchTerm = searchInput.value.toLowerCase();
+            const productDivs = document.querySelectorAll(".div");
+
+            productDivs.forEach((div) => {
+                const textContainer = div.querySelector(".text-container");
+                const productName = textContainer.textContent.toLowerCase();
+                
+                if (productName.includes(searchTerm)) {
+                    div.style.display = "block";
+                } else {
+                    div.style.display = "none";
+                }
+            });
+        });
+    </script>
+     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+
+</html>

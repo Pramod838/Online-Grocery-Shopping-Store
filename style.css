@@ -1,0 +1,128 @@
+/* Reset some default styles */
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  /* Style the top navigation */
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .menu {
+    display: flex;
+  }
+  
+  .menu li a {
+    margin: 0 15px;
+    color: #3b3b3b;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: all ease 0.3s;
+  }
+  
+  .logo {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #202020;
+    text-decoration: none;
+  }
+  
+  /* Style the search box */
+  .searchbox {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #444;
+  }
+  
+  .search-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .search-box i {
+    font-size: 24px;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  
+  .search-input {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .search-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Style the right navigation (button logo) */
+  .buttonlogo {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 20px;
+  }
+  
+  .right-nav a {
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+  }
+  
+  .right-nav a i {
+    font-size: 24px;
+    margin-right: 5px;
+  }
+  
+  /* Style the icons in the right navigation */
+  .right-nav a span {
+    position: relative;
+    top: -7px;
+    right: -7px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 0.6rem;
+    font-weight: 500;
+  }
+  
+  .right-nav .like span {
+    background-color: #ff6c57;
+  }
+  
+  .right-nav .cart span {
+    background-color: #4eb060;
+  }
+  
+  .right-nav .user-profile span {
+    background-color: rgb(95, 183, 224);
+  }
+  
+  .menu li a:hover, .menu .active {
+    color: #40aa54;
+    transition: all ease 0.3s;
+  }
+  
+  /* Additional styles as needed */
+  

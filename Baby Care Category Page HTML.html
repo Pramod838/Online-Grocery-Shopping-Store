@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="try.css">
+    <style>
+        body {
+            background-color:  #f4f3ef;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+          <div class="icon">
+            <a href="http://127.0.0.1:5500/Home%20Page%20HTML.html">
+                <h2 class="logo">AapnaKirana</h2>
+            </div>
+    <div class="main">
+        <div class="navbar">
+            <div class="menu">
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/Home%20Page%20HTML.html">HOME</a></li>
+                    <li><a href="http://127.0.0.1:5500/About%20Us%20HTML.html">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="http://127.0.0.1:5500/Login%20And%20Registration%20HTML.html">login</a></li>
+                    <li><a href="http://127.0.0.1:5500/Profile%20HTML.html">Profile</a></li>
+
+                    
+                </ul>
+            </div>
+            <div class="icons">
+                <a href="http://127.0.0.1:5500/Wishlist%20HTML.html" class="wishlist-link">
+                    <ion-icon name="heart-outline" class="wishlist"></ion-icon>
+                </a>
+                <a href="http://127.0.0.1:5500/users/templates/users/Shopping%20Cart%20HTML.html" class="cart-link">
+                    <ion-icon name="cart-outline" class="cart"></ion-icon>
+                </a>
+            </div>
+
+           
+    </div>
+
+
+
+
+
+        
+
+    </div>
+        <th><a href="Spices.html"> <button class="b1">Spice</button> </th></a>
+        <th> <a href="Fruits Category Page HTML.html"><button class="b1">Fruits</button> </th></a>
+         <th> <a href="Snacks.html"><button class="b1">Snacks</button> </th></a>
+          <th> <a href="Oil.html.html"><button class="b1">oil & Ghee</button> </th></a>
+         <th> <a href="Biscuits.html"><button class="b1">Biscuits</button> </th></a>
+          <th><a href="Cleaners.html"> <button class="b1">Cleaners</button> </th></a>
+         <th> <a href="Vegetables.html.html"><button class="b1">Vegetables</button> </th></a>
+       
+        <div class="search">
+            <input class="srch" id="search-input" type="search" name="" placeholder="Type To Search">
+            <button class="btn" id="search-button">Search</button>
+        </div>
+        <div class="image-slides">
+            <div class="image fade">
+                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/AmazonBrands/Bikram/Bikram1/5_PC_1500x300.jpg" alt="Mountain Top">
+            </div>
+            <div class="image fade">
+                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img24/Phase3/758269d0-ac32-4e54-b849-2f4165da4d1b.jpg" alt="Palm Trees">
+            </div>
+            <div class="image fade">
+                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/kmargso/Baby/Medela_1500x300.jpg" alt="Neon Sign">
+            </div>
+        </div>
+        <script src="try.js"></script>
+        
+          <script src="try.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function ()
+         {
+            const searchInput = document.getElementById("search-input");
+            const searchButton = document.getElementById("search-button");
+            const products = document.querySelectorAll(".product");
+
+            searchButton.addEventListener("click", function () {
+                const searchTerm = searchInput.value.toLowerCase();
+
+                products.forEach(function (product) {
+                    const productTitle = product.querySelector("h3").textContent.toLowerCase();
+                    if (productTitle.includes(searchTerm)) {
+                        product.style.display = "block";
+                    } else {
+                        product.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+    </head>
+    
+   
+        
+     
+        <div class="product-list">
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/diaper/x/y/1/-original-imaggmxvga56edgg.jpeg?q=70"
+                    alt="Product 1">
+                <h3>Pampers All Round Protection Diaper Pants</h3>
+                <p>Price: 960 </p>
+                <button>Add to Cart</button>
+            </div>
+    
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/baby-care-combo/s/e/8/-original-imagsrcdgxsqazxy.jpeg?q=70"
+                    alt="Product 2">
+                <h3>HIMALAYA HAPPY BABY GIFT BASKET (7 IN 1) </h3>
+                <p>Price: 550</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/k6jnfrk0/moisturizer-cream/p/h/j/400-baby-lotion-400-ml-himalaya-lotion-original-imafzzeagzenfwam.jpeg?q=70" alt="Product 2">
+                <h3>HIMALAYA Baby Lotion</h3>
+                <p>Price: 250</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/k6jnfrk0/soap/3/d/3/4-300-gentle-baby-soap-value-pack-himalaya-original-imafzzebmuqvvcp8.jpeg?q=70" alt="Product 2">
+                <h3>HIMALAYA GENTLE BABY SOAP VALUE PACK</h3>
+                <p>Price: 165</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/baby-care-combo/u/d/j/baby-cream-200ml-powder-400-g-free-baby-massage-oil-mustard-200-original-imagqrcyrwvsgzvw.jpeg?q=70" alt="Product 2">
+                <h3>HIMALAYA Baby Powder </h3>
+                <p>Price: 231</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/diaper/k/t/p/-original-imagk7upq7egmums.jpeg?q=70" alt="Product 2">
+                <h3>Huggies Complete Comfort Wonder Pant Baby Diaper</h3>
+                <p>Price: 154</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shampoo/d/u/7/-original-imaghmgt5hsjwake.jpeg?q=70" alt="Product 2">
+                <h3>HIMALAYA GENTLE BABY SHAMPOO</h3>
+                <p>Price: 249</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/k6jnfrk0/massage-oil/f/5/x/500-massage-oil-8901138829131-himalaya-original-imafzzebtwunkf3g.jpeg?q=70" alt="Product 2">
+                <h3>HIMALAYA Massage Oil</h3>
+                <p>Price: 349</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/moisturizer-cream/2/q/n/-original-imagsvvz6zgj6sp4.jpeg?q=70" alt="Product 2">
+                <h3>HIMALAYA Baby Cream</h3>
+                <p>Price: 249</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shampoo/0/i/c/-original-imagv2perrqw5evf.jpeg?q=70" alt="Product 2">
+                <h3>JOHNSON'S Baby No More Tears Shampoo</h3>
+                <p>Price: 449</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/k6jnfrk0/shampoo/j/h/y/100-gentle-baby-shampoo-himalaya-original-imafzzebmbxxaa4t.jpeg?q=70" alt="Product 2">
+                <h3>JOHNSON'S Baby No More Tears Shampoo</h3>
+                <p>Price: 449</p>
+                <button>Add to Cart</button>
+            </div>
+            
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/k6jnfrk0/body-skin-treatment/u/q/h/50-diaper-rash-cream-himalaya-original-imafzzeav329j4mh.jpeg?q=70" alt="Product 2">
+                <h3>HIMALAYA GENTLE BABY SHAMPOO</h3>
+                <p>Price: 90</p>
+                <button>Add to Cart</button>
+            </div>
+
+            
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/k7z3afk0/wipe/k/f/s/gentle-baby-wipes-2-8901138834739-himalaya-original-imafq3ez85fgzzz2.jpeg?q=70" alt="Product 2">
+                <h3>HIMALAYA Diaper Rash Cream</h3>
+                <p>Price: 149</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/baby-cereal/v/c/z/-original-imagthhfxuchggj6.jpeg?q=70" alt="Product 2">
+                <h3>Pieces 4-in-1 Travel Bottle Set</h3>
+                <p>Price: 249</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/k6jnfrk0/baby-care-combo/x/b/g/happy-baby-gift-pack-7-8901138513207-himalaya-original-imafzze9zxhtqzu2.jpeg?q=70" alt="Product 2">
+                <h3>HIMALAYA Gentle Baby Wipes</h3>
+                <p>Price: 249</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/k6jnfrk0/talc/e/z/n/100-baby-powder-himalaya-original-imafzzecvegwgha5.jpeg?q=70" alt="Product 2">
+                <h3>Nestle Ceregrow Multigrain Cereal </h3>
+                <p>Price: 149</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/kcnp8y80/body-wash/z/m/a/400-gentle-baby-wash-himalaya-original-imaftq4fzydrjs6q.jpeg?q=70" alt="Product 2">
+                <h3>HIMALAYA Happy Baby Gift Pack ( 7 IN 1)</h3>
+                <p>Price: 349</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/kxz0pe80/bath-essential-oil/z/p/i/-original-imagab9npzhhzqnq.jpeg?q=70" alt="Product 2">
+                <h3>HIMALAYA Khus Khus Baby Powder</h3>
+                <p>Price: 149</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/ko7idu80/soap/d/e/y/1-100-kids-cleansing-bar-for-delicate-skin-pack-of-1-100g-original-imag2pvntvqadavg.jpeg?q=70" alt="Product 2">
+                <h3>HIMALAYA Gentle Baby Wash</h3>
+                <p>Price: 249</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/l0bbonk0/teether-soother/m/w/f/0-fruit-and-food-nibbler-with-silicone-sack-pink-natural-food-original-imagc4htaytvyxve.jpeg?q=70" alt="Product 2">
+                <h3>LuvLap Sunshine Stroller/Pram</h3>
+                <p>Price: 3,149</p>
+                <button>Add to Cart</button>
+            </div>
+
+
+            
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/wipe/t/5/f/-original-imagzueb2cjnz6t8.jpeg?q=70" alt="Product 2">
+                <h3>Dabur Lal Tail - Ayurvedic Baby Oil - Clinically</h3>
+                <p>Price: 149</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/baby-cereal/n/k/u/-original-imagtqyhtugutxnc.jpeg?q=70" alt="Product 2">
+                <h3>Sebamed kids Cleansing bar for delicate skin</h3>
+                <p>Price: 249</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/kbfeljk0/moisturizer-cream/k/a/s/100-baby-cream-cream-johnson-s-original-imafss3zbwfypejt.jpeg?q=70" alt="Product 2">
+                <h3>MeeMee Fruit and Food Nibbler (With Silicone Sack)</h3>
+                <p>Price: 249</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/bottle-cleaner/i/h/5/4-pcs-baby-milk-bottle-nipple-straw-brush-sponge-nylon-cleaning-original-imagkznp98xfewpd.jpeg?q=70" alt="Product 2">
+                <h3>MeeMee Caring Baby Wet Wipes with Aloe Vera (72 pcs)</h3>
+                <p>Price: 249</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/jq5iky80/baby-care-combo/q/9/7/baby-care-collection-baby-gift-set-with-organic-cotton-baby-t-original-imafb2dnz97bjusy.jpeg?q=70" alt="Product 2">
+                <h3>Nestle Cerelac Multi Grain Dal Veg Cereal</h3>
+                <p>Price: 349</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/massage-oil/q/f/m/-original-imagvyzez5aatpfj.jpeg?q=70" alt="Product 2">
+                <h3>JOHNSON'S Baby Cream</h3>
+                <p>Price: 149</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/kobspe80/breast-pump/x/e/y/breast-pump-18481-luvlap-original-imag2sxxz7cjxzqx.jpeg?q=70" alt="Product 2">
+                <h3>SYGA 4 Pcs Baby Milk Bottle Nipple Straw Brush Sponge</h3>
+                <p>Price: 189</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/kmmcrrk0/walker/n/e/w/baby-walker-7-panda-creation-original-imagfgzxspazjfex.jpeg?q=70" alt="Product 2">
+                <h3>JOHNSON'S Baby Care Collection Gift Set  </h3>
+                <p>Price: 349</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/kn4xhu80/bath-towel/z/y/x/ultra-soft-hooded-classic-and-designer-baby-bath-towel-bath-original-imagfvvf3fbdnknz.jpeg?q=70" alt="Product 2">
+                <h3>JOHNSON'S Baby Oil with Vitamin E</h3>
+                <p>Price: 449</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/insect-repellent/l/f/x/-original-imagnft9mapjjyew.jpeg?q=70" alt="Product 2">
+                <h3>LuvLap Manual Breast Pump</h3>
+                <p>Price: 569</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/krme93k0/feeding-utensil/m/j/d/3-in-1-baby-weaning-spoon-multicolor-spoon-spoon-meemee-5-original-imag5dbfzjybzqpv.jpeg?q=70" alt="Product 2">
+                <h3>Vanilla Flavour Crème Sandwich Biscuit </h3>
+                <p>Price: 89</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/talc/e/0/x/-original-imagqtgvq6jwcvnz.jpeg?q=70" alt="Product 2">
+                <h3>Panda Creation Musical Activity Walker</h3>
+                <p>Price: 1,229</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/k6jnfrk0/massage-oil/z/e/z/100-baby-massage-oil-8901138511739-himalaya-original-imafzzebpqycvfs5.jpeg?q=70" alt="Product 2">
+                <h3>BRANDONN Microfiber 250 GSM Bath Towel</h3>
+                <p>Price: 209</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/nursing-breast-pad/4/p/k/-original-imaghvn2r9twxjjz.jpeg?q=70" alt="Product 2">
+                <h3>Mamaearth Anti Mosquito Fabric Roll On</h3>
+                <p>Price: 99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/bath-towel/h/l/s/premium-quality-ultra-soft-baby-bath-towel-for-new-born-baby-boy-original-imags2xwfcemm7mx.jpeg?q=70" alt="Product 2">
+                <h3>MeeMee 3 in 1 Baby Weaning Spoon (Multicolor)</h3>
+                <p>Price: 289</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/sipper-cup/l/n/u/150-bpa-free-non-spill-for-baby-toddlers-kids-150ml-1-mm-4010a-original-imagzczvepkgz5ch.jpeg?q=70" alt="Product 2">
+                <h3>JOHNSON'S Baby Powder Blossoms Natural</h3>
+                <p>Price: 119</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/baby-bottle/r/v/d/-original-imaggzd89prk9mf4.jpeg?q=70" alt="Product 2">
+                <h3>HIMALAYA Baby Massage Oil</h3>
+                <p>Price: 189</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/612/612/jve4pe80/shampoo/f/e/3/200-baby-no-more-tears-shampoo-200-ml-johnson-s-original-imaf6uf3kbdtffhq.jpeg?q=70" alt="Product 2">
+                <h3>MeeMee BREAST PAD Nursing Breast Pad</h3>
+                <p>Price: 195</p>
+                <button>Add to Cart</button>
+            </div>
+    
+    
+            <div class="back-to-home">
+                <a href="http://127.0.0.1:5500/Home%20Page%20HTML.html" style="color: white; text-decoration: none;">Back to Home</a>
+
+                </a>
+    
+    
+        </div>
+    </body>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>

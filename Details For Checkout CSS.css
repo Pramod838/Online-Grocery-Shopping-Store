@@ -1,0 +1,129 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* Global CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
+}
+
+/* Contact Section */
+.contact-in {
+    width: 80%;
+    min-height: 60vh;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.contact-map {
+    width: 100%;
+    height: auto;
+    flex: 50%;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.contact-form {
+    width: 100%;
+    min-height: auto;
+    flex: 50%;
+    padding: 30px;
+    text-align: center;
+}
+
+.contact-form h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-form-txt,
+.time_slot,
+.contact-form-textarea {
+    width: 100%;
+    height: 40px;
+    color: #333;
+    border: 1px solid #bcbcbc;
+    border-radius: 50px;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.contact-form-txt::placeholder,
+.time_slot::placeholder,
+.contact-form-textarea::placeholder {
+    color: #aaa;
+}
+
+.contact-form-btn {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
+    color: #fff;
+    text-transform: uppercase;
+    padding: 15px 0;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+.contact-form-btn:hover {
+    background: linear-gradient(120deg, #8e44ad, #2980b9);
+}
+
+#error_message {
+    margin-bottom: 20px;
+    background: #fe8b8e;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+
+/* Back to Home Button */
+.back-to-home-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.back-to-home-btn {
+    background: #fff;
+    color: #2980b9;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s;
+    border: 2px solid #2980b9;
+}
+
+.back-to-home-btn:hover {
+    background: #2980b9;
+    color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}

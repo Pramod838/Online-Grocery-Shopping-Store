@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 130%;
+     background-position: center;
+    background-size: cover;
+    height: 15vh;
+    text-align: center;
+    font-weight: bold;
+}
+
+.navbar{
+    width: 1300px;
+    height: 100px;
+    margin: auto;
+    border-radius:20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo{
+    color: #ff7200;
+    font-size: 42px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px;
+    margin-left: 40px;
+    font-weight: bold;
+}
+
+.menu{
+    width: 700px;
+    float: left;
+    height: 80px;
+    margin-right: 750px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 18px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+    color: #ff7200;
+}
+
+.search{
+    width: 400px;
+    float: right;
+    margin-right: 30px;
+    align-self: right;
+}
+
+.srch{
+    font-family: 'Times New Roman';
+    width: 300px;
+    height: 40px;
+    background: transparent;
+    border: 3px solid #ff7200;
+    margin-top: 13px;
+    color: #391818;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.search:hover {
+    color: white;
+    box-shadow: 0 5px #fbf9f9;
+    transform: translateY(4px);
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    background: #ff7200;
+    border: 2px solid #ff7200;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #000;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.srch:focus{
+    outline: none;
+}
+
+.content{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    color: #fff;
+    position: relative;
+}
+
+.content .par{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+}
+
+.content h1{
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    padding-left: 20px;
+    margin-top: 9%;
+    letter-spacing: 2px;
+}
+
+.content .cn{
+    width: 160px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+    
+}
+
+.content .cn a{
+    text-decoration: none;
+    color: #000;
+    transition: .3s ease;
+}
+
+.cn:hover{
+    background-color: #fff;
+}
+
+.content span{
+    color: #ff7200;
+    font-size: 65px
+}
+
+.form{
+    width: 250px;
+    height: 380px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    position: absolute;
+    top: -20px;
+    left: 870px;
+    transform: translate(0%,-5%);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.form h2{
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #ff7200;
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
+}
+
+.form input{
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #ff7200;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+
+.form input:focus{
+    outline: none;
+}
+
+::placeholder{
+    color: #602424;
+    font-family: Arial;
+}
+
+.btnn{
+    width: 240px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+}
+.btnn:hover{
+    background: #fff;
+    color: #ff7200;
+}
+.btnn a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.form .link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-top: 20px;
+    text-align: center;
+}
+.form .link a{
+    text-decoration: none;
+    color: #ff7200;
+}
+.liw{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.icons a{
+    text-decoration: none;
+    color: #fff;
+}
+.icons ion-icon{
+    color: #fff;
+    font-size: 30px;
+    padding-left: 14px;
+    padding-top: 5px;
+    transition: 0.3s ease;
+}
+.icons ion-icon:hover{
+    color: #ff7200;
+}
+
+
+.heading {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #b2b2b2;
+    color: white;
+    height:100px;
+}
+
+
+
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    width: 250px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    margin: 30px;
+    padding: 10px;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.1); /* Increase the size by 10% */
+    box-shadow: 5px 5px 10px rgba(0, 6, 4, 0.6); /* Add a shadow */
+  }
+
+.product img {
+    max-width: 100%;
+    height: 200px;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+button.b1 {
+    background-color: black;
+    border-color: white;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px;
+}
+
+button.b1:hover {
+    background-color: cornflowerblue;
+    color: white;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#b10 {
+    background-color: black;
+    border-color: white;
+    border-radius: 25px;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 80px auto;
+    display: block;
+    background-color: black;
+    width: 40%;
+    color: white;
+    margin: 50px auto;
+    border: none;
+    cursor: pointer;
+}
+
+#b10:hover {
+    background-color: bisque;
+    color: red;
+}
+
+.icons {
+    text-align: center;
+    padding-right: 40px;
+    margin-top: 30px;
+    margin-right: 80px;
+    position: absolute;
+    right: 0;
+
+}
+
+.icons ion-icon {
+    font-size: 50px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: 0.2s ease;
+
+}
+
+
+.icons ion-icon:hover {
+    color: #ff7200;
+}
+
+.heading h1 {
+    display: inline-block;
+    padding: 10px 20px;
+      background-color: rgb(176, 146, 98);
+    color: white;
+}
+.container {
+    position: relative;
+}
+
+.back-to-home {
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: 50px auto; /* This centers the element horizontally */
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.back-to-home a {
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
+    padding: 10px 40px;
+    font-size: 35px;
+    height: 32px;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: .2s linear;
+    display: inline-block;
+}
+
+.back-to-home a:hover {
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+
+.image-slides {
+    max-width: 90%; /* Adjust the max-width as needed */
+    margin: 20px auto;
+    height:350px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.image.fade {
+    width: 100%;
+    display: none;
+    background-image: cover;
+}
+
+.image.fade img {
+    width: 100%;
+    height: auto;
+}
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="try.css">
+    <style>
+        body {
+            background-color:  #f4f3ef;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+          <div class="icon">
+            <a href="http://127.0.0.1:5500/Home%20Page%20HTML.html">
+                <h2 class="logo">AapnaKirana</h2>
+            </div>
+    <div class="main">
+        <div class="navbar">
+            <div class="menu">
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/Home%20Page%20HTML.html">HOME</a></li>
+                    <li><a href="http://127.0.0.1:5500/About%20Us%20HTML.html">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="http://127.0.0.1:5500/Login%20And%20Registration%20HTML.html">login</a></li>
+                    <li><a href="http://127.0.0.1:5500/Profile%20HTML.html">Profile</a></li>
+
+                    
+                </ul>
+            </div>
+            <div class="icons">
+                <a href="http://127.0.0.1:5500/Wishlist%20HTML.html" class="wishlist-link">
+                    <ion-icon name="heart-outline" class="wishlist"></ion-icon>
+                </a>
+                <a href="http://127.0.0.1:5500/Shopping%20Cart%20HTML.html" class="cart-link">
+                    <ion-icon name="cart-outline" class="cart"></ion-icon>
+                </a>
+            </div>
+
+           
+    </div>
+
+
+
+
+
+        
+
+    </div>
+        <th><a href="Spices.html"> <button class="b1">Spice</button> </th></a>
+        <th> <a href="Fruits Category Page HTML.html"><button class="b1">Fruits</button> </th></a>
+         <th> <a href="Snacks.html"><button class="b1">Snacks</button> </th></a>
+          <th> <a href="Oil.html.html"><button class="b1">oil & Ghee</button> </th></a>
+         <th> <a href="Biscuits.html"><button class="b1">Biscuits</button> </th></a>
+          <th><a href="Cleaners.html"> <button class="b1">Cleaners</button> </th></a>
+         <th> <a href="Vegetables.html.html"><button class="b1">Vegetables</button> </th></a>
+       
+        <div class="search">
+            <input class="srch" id="search-input" type="search" name="" placeholder="Type To Search">
+            <button class="btn" id="search-button">Search</button>
+        </div>
+        <div class="image-slides">
+            <div class="image fade">
+                <img src="https://media6.ppl-media.com/tr:w-1280,c-at_max,pr-true,dpr-2/mediafiles/ecomm/misc/1698771419_pfs-combo_thick-strip-web.jpg" alt="Mountain Top">
+            </div>
+            <div class="image fade">
+                <img src="https://media6.ppl-media.com/tr:w-1280,c-at_max,pr-true,dpr-2/mediafiles/ecomm/misc/1699017210_body-lotion-web.jpg" alt="Palm Trees">
+            </div>
+            <div class="image fade">
+                <img src="https://media6.ppl-media.com/tr:w-1280,c-at_max,pr-true,dpr-2/mediafiles/ecomm/misc/1698771417_pfs-new-launch_thick-strip-web.jpg" alt="Neon Sign">
+            </div>
+        </div>
+        <script src="try.js"></script>
+        
+          <script src="try.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function ()
+         {
+            const searchInput = document.getElementById("search-input");
+            const searchButton = document.getElementById("search-button");
+            const products = document.querySelectorAll(".product");
+
+            searchButton.addEventListener("click", function () {
+                const searchTerm = searchInput.value.toLowerCase();
+
+                products.forEach(function (product) {
+                    const productTitle = product.querySelector("h3").textContent.toLowerCase();
+                    if (productTitle.includes(searchTerm)) {
+                        product.style.display = "block";
+                    } else {
+                        product.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+    </head>
+
+<body>
+
+    <div class="product-list">
+        <div class="product">
+            <img src="https://i5.walmartimages.com/asr/914be45c-61ef-403d-883a-f59d48c76c02_1.e30e3e77991b09191becf98088b60fad.jpeg"
+                alt="Product 1">
+            <h3>Dove Shampoo</h3>
+            <p>Price: 130</p>
+         <!-- Add id attributes to the buttons -->
+<button id="addToCartBtn1" class="b1">Add to Cart</button>
+<button id="addToCartBtn2" class="b1">Add to Cart</button>
+<!-- ... Add more buttons as needed -->
+
+        </div>
+
+        <div class="product">
+            <img src="https://th.bing.com/th/id/OIP.6jogEB8lFYTBIIbTKmk-nAHaHa?pid=ImgDet&w=900&h=900&rs=1"
+                alt="Product 2">
+            <h3>Product Name 2</h3>
+            <p>Price: 234</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://www.byrdie.com/thmb/07zNxTWPHfGkTsaMtcx8B_GKtBk=/fit-in/1500x1500/filters:no_upscale():max_bytes(150000):strip_icc()/d5632550-3c3e-41a3-98ef-ecaf03a06815.4004b7b1443e784a6acbab6c4435c65e-a9765b5b22414c0f813ab8be140a04de.jpeg" alt="Product 2">
+            <h3>Product Name 2</h3>
+            <p>Price: 344</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://th.bing.com/th/id/R.7e6f4a4d1168d1004b29fbc6ea5d9c55?rik=35txINt%2fIQYX%2bA&riu=http%3a%2f%2fcdn.ecommercedns.uk%2ffiles%2f0%2f202650%2f0%2f4739060%2fshampoo-250ml.png&ehk=WaQ6rSzMZwoZ7ganK%2bP4CN2nUnoGhTk35GsxDDyWhgU%3d&risl=1&pid=ImgRaw&r=0" alt="Product 2">
+            <h3>Product Name 2</h3>
+            <p>Price: 435</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://cdn.shopify.com/s/files/1/0645/3807/products/Bondi_Wash_Sydney_Peppermint_Rosemary_Body_Lotion_2000x.jpg?v=1562578387" alt="Product 2">
+            <h3>Product Name 2</h3>
+            <p>Price: 123</p>
+<button id="addToCartBtn1" class="b1">Add to Cart</button>
+<button id="addToCartBtn2" class="b1">Add to Cart</button>
+
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/51WEVuuOoPL.AC_UL320.jpg" alt="Product 2">
+            <h3>SPF/Formulated with Beetroot Extracts 12gms beetroot</h3>
+            <p>Price: 140</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71oTN8WVkvL.AC_UL320.jpg" alt="Product 2">
+            <h3> Mini Glam Kit - 8 in 1 </h3>
+            <p>Price: 155</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71uK1LHzZwL.AC_UL320.jpg" alt="Product 2">
+            <h3>24K Gold Radiance Face Scrub-25 gm</h3>
+            <p>Price: 255</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/617CT4rXi5L.AC_UL320.jpg" alt="Product 2">
+            <h3>Natural Cherry Lip Balm</h3>
+            <p>Price: 245</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/51IgR2yRK2L.AC_UL320.jpg" alt="Product 2">
+            <h3> 9 to 5 CC Cream Mini</h3>
+            <p>Price: 154</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/41-qstscYeL.AC_UL320.jpg" alt="Product 2">
+            <h3>LAKMÉ 9 To 5 CC Cream</h3>
+            <p>Price: 345</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61u9VdqpsnL.AC_UL320.jpg" alt="Product 2">
+            <h3>Festive MakeUp Kit</h3>
+            <p>Price: 125</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/51pRrNnpfNL.AC_UL320.jpg" alt="Product 2">
+            <h3>Cosmetics Crème Blusher</h3>
+            <p>Price:452</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/51wfOpdqHyL.AC_UL320.jpg" alt="Product 2">
+            <h3> New York Compact Powder</h3>
+            <p>Price: 340</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71H9blnfV8L.AC_UL320.jpg" alt="Product 2">
+            <h3>Pieces 4-in-1 Travel Bottle Set</h3>
+            <p>Price: 50</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/614fdyo+KHL.AC_UL320.jpg" alt="Product 2">
+            <h3>Tipsy Lip Balm</h3>
+            <p>Price: 90</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/513Zt7KA-BL.AC_UL320.jpg" alt="Product 2">
+            <h3>Cosmetics Flawless 30 ml</h3>
+            <p>Price:100</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61bMQyS-AyL.AC_UL320.jpg" alt="Product 2">
+            <h3>Cosmetics - Set The Tone</h3>
+            <p>Price: 543</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/51w7bKNOBJL.AC_UL320.jpg" alt="Product 2">
+            <h3>SUGAR Cosmetics - Magic Wand</h3>
+            <p>Price: 456</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/51YUIcPAcKL.AC_UL320.jpg" alt="Product 2">
+            <h3>Radiant Lifting Foundation SPF 30</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/51CkHdtiqkL.AC_UL320.jpg" alt="Product 2">
+            <h3>Transparent Cosmetic Container</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61VIvhv+RCL.AC_UL320.jpg" alt="Product 2">
+            <h3>SUGAR Cosmetics - Uptown Curl</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61KOuRbObCL.AC_UL320.jpg" alt="Product 2">
+            <h3>Organics Noni Glow Face Oil, 30 ml</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61SmgkLTsXL.AC_UL320.jpg" alt="Product 2">
+            <h3>SUGAR Cosmetics - Ace Of Face </h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71Ik3bof94L.AC_UL320.jpg" alt="Product 2">
+            <h3>Elle18 Lasting Glow Compact 1, Pearl, 9 g</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71cbZYZ7RDL.AC_UL320.jpg" alt="Product 2">
+            <h3>Dazller Lavish Love Kit - 11 in 1</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61X1dUjusML.AC_UL320.jpg" alt="Product 2">
+            <h3>MyGlamm Popxo Makeup</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61K+foNrkDL.AC_UL320.jpg" alt="Product 2">
+            <h3>Superfood Color Pop Lip Balm-Rose-4.6gm</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61cEhAyB1IL.AC_UL320.jpg" alt="Product 2">
+            <h3>Cosmetic Palette Organizer</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/51npbOKX3EL.AC_UL320.jpg" alt="Product 2">
+            <h3>Cosmetics Dewy Setting Mist - 50 ml</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/51sQqTL0H0L.AC_UL320.jpg" alt="Product 2">
+            <h3>Glitter Makeup Highlighter, 3.5 gm</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71hJmsYX2kL.AC_UL320.jpg" alt="Product 2">
+            <h3>Cosmetics Force Eyes And Face Palette </h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61VAaPjLrEL.AC_UL320.jpg" alt="Product 2">
+            <h3>Makeup Box for Women</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/21BsckVY2NL.AC_UL320.jpg" alt="Product 2">
+            <h3>SET OF 6PCS 30 ML CLEAR FROSTED FLAT SHOULDER glass bottle </h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61C8bfehtNL.AC_UL320.jpg" alt="Product 2">
+            <h3>SUGAR Cosmetics - Face Fwd</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71iYHDfBCmL.AC_UL320.jpg" alt="Product 2">
+            <h3>SUGAR Cosmetics - All Set To Go</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71FAGo-QaWL.AC_UL320.jpg" alt="Product 2">
+            <h3>FIXDERMA LABORATORIES 10% </h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/81CjZhMqQXL.AC_UL320.jpg" alt="Product 2">
+            <h3>Face Palette with Lightweight Blush</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/41YaPqek1SL.AC_UL320.jpg" alt="Product 2">
+            <h3>VYAKAT 4-in-1 Smart Travel Bottles Set</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61zcyI4uuJL.AC_SR278,278_QL70.jpg" alt="Product 2">
+            <h3>
+            Face and Body wash for Men, 250ml</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71sPRR9c-aL.AC_SR278,278_QL70.jpg" alt="Product 2">
+            <h3>3 in 1 Beauty Base: Foundation</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://images-eu.ssl-images-amazon.com/images/I/61MJ8Vqs8IL.AC_UL320_SR320,320.jpg" alt="Product 2">
+            <h3>Hair Vitalizer Shampoo 250ml</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61zmlisUdIL.AC_UL320.jpg" alt="Product 2">
+            <h3>Cure Primer for Face Mackeup</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/51YlmV6WspL.AC_UL320.jpg" alt="Product 2">
+            <h3>Garnier Skin Natural Bright</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61W6HQfb69L.AC_UL320.jpg" alt="Product 2">
+            <h3>Minimalist Gentle Cleanser 6% </h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://www.amazon.in/sspa/click?ie=UTF8&spc=MToyODA4MzgwODM4ODA1NjU2OjE2OTc3NDIzNzI6c3BfYXRmOjIwMDgyOTIwNjk4ODk4OjowOjo&url=%2FSimple-Kind-Refreshing-Facial-Globalbeauty%2Fdp%2FB000LQUA6M%2Fref%3Dsr_1_3_sspa%3Fcrid%3D161SGG38V4PXF%26keywords%3Dface%2Bwash%26qid%3D1697742372%26sprefix%3Dface%252Caps%252C410%26sr%3D8-3-spons%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9hdGY%26psc%3D1" alt="Product 2">
+            <h3>Simple Kind to Skin Facewash</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/611qbZlbAiL.AC_UL320.jpg" alt="Product 2">
+            <h3>Lacto Calamine Face Wash</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/51tXjE2WQQL.AC_UL320.jpg" alt="Product 2">
+            <h3>Himalaya Purifying Neem Face Wash</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="Biotique Fruit Brightening Face Wash" alt="Product 2">
+            <h3>Product Name 2</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/51IVaQ1Y2tL.AC_UL320.jpg" alt="Product 2">
+            <h3>Vitamin C Face Wash</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71t9JRry+3L.AC_UL320.jpg" alt="Product 2">
+            <h3>Cetaphile Face Wash</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/712mzN6txEL.AC_UL320.jpg" alt="Product 2">
+            <h3>Bioyique Papaya Deep Face Wash</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61I4jiYTuAL.AC_UL320.jpg" alt="Product 2">
+            <h3>Sebamed Anti-Hairloss Shampoo</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61xkoSbMMPL.AC_UL320.jpg" alt="Product 2">
+            <h3>Professional Shampoo and Conditioner</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61qqOjwy8aL.AC_UL320.jpg" alt="Product 2">
+            <h3>Product Name 2</h3>
+            <p>Price: $3.49</p>
+            <button>Add to Cart</button>
+        </div>
+       
+
+
+
+
+
+
+
+</html>
+
+    </div>
+    <button type="button" class="return-home" id="b10"
+        onclick="window.location.href='Home Page HTML.html';">Back to Home</button>
+
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+
+</html>

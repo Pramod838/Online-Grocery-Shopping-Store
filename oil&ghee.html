@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="try.css">
+    <style>
+        body {
+            background-color:  #f4f3ef;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+          <div class="icon">
+            <a href="http://127.0.0.1:5500/Home%20Page%20HTML.html">
+                <h2 class="logo">AapnaKirana</h2>
+            </div>
+    <div class="main">
+        <div class="navbar">
+            <div class="menu">
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/Home%20Page%20HTML.html">HOME</a></li>
+                    <li><a href="http://127.0.0.1:5500/About%20Us%20HTML.html">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="http://127.0.0.1:5500/Login%20And%20Registration%20HTML.html">login</a></li>
+                    <li><a href="http://127.0.0.1:5500/Profile%20HTML.html">Profile</a></li>
+
+                    
+                </ul>
+            </div>
+            <div class="icons">
+                <a href="http://127.0.0.1:5500/Wishlist%20HTML.html" class="wishlist-link">
+                    <ion-icon name="heart-outline" class="wishlist"></ion-icon>
+                </a>
+                <a href="http://127.0.0.1:5500/users/templates/users/Shopping%20Cart%20HTML.html" class="cart-link">
+                    <ion-icon name="cart-outline" class="cart"></ion-icon>
+                </a>
+            </div>
+
+           
+    </div>
+
+
+
+
+
+        
+
+    </div>
+        <th><a href="Spices.html"> <button class="b1">Spice</button> </th></a>
+        <th> <a href="Fruits Category Page HTML.html"><button class="b1">Fruits</button> </th></a>
+         <th> <a href="Snacks.html"><button class="b1">Snacks</button> </th></a>
+          <th> <a href="Oil.html.html"><button class="b1">oil & Ghee</button> </th></a>
+         <th> <a href="Biscuits.html"><button class="b1">Biscuits</button> </th></a>
+          <th><a href="Cleaners.html"> <button class="b1">Cleaners</button> </th></a>
+         <th> <a href="Vegetables.html.html"><button class="b1">Vegetables</button> </th></a>
+       
+        <div class="search">
+            <input class="srch" id="search-input" type="search" name="" placeholder="Type To Search">
+            <button class="btn" id="search-button">Search</button>
+        </div>
+        <div class="image-slides">
+            <div class="image fade">
+                <img src="https://www.bigbasket.com/media/uploads/banner_images/ZXPL4757-La-espo-l2-fom-1200x300-25-oct-23.jpg?tr=w-3840,q=80" alt="Mountain Top">
+            </div>
+            <div class="image fade">
+                <img src="https://cdn.modernbazaar.online/assets/uploads/category/compress/Oils_Ghee__SubcatBanner.jpg" alt="Palm Trees">
+            </div>
+            <div class="image fade">
+                <img src="https://nourishstore.co.in/wp-content/uploads/2023/02/oils-min.jpg" alt="Neon Sign">
+            </div>
+        </div>
+        <script src="try.js"></script>
+        
+          <script src="try.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function ()
+         {
+            const searchInput = document.getElementById("search-input");
+            const searchButton = document.getElementById("search-button");
+            const products = document.querySelectorAll(".product");
+
+            searchButton.addEventListener("click", function () {
+                const searchTerm = searchInput.value.toLowerCase();
+
+                products.forEach(function (product) {
+                    const productTitle = product.querySelector("h3").textContent.toLowerCase();
+                    if (productTitle.includes(searchTerm)) {
+                        product.style.display = "block";
+                    } else {
+                        product.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+    </head>
+    
+   
+        
+     
+        <div class="product-list">
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/280/280/kqidx8w0/edible-oil/t/w/k/na-pouch-rice-bran-oil-fortune-original-imag4gb3ufzzgqtu.jpeg?q=70"
+                    alt="Product 1">
+                <h3>Fortune rice bron health</h3>
+                <p>Price: 130</p>
+                <button>Add to Cart</button>
+            </div>
+    
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/280/280/xif0q/edible-oil/c/d/5/-original-imagg9yyvysnqs4b.jpeg?q=70"
+                    alt="Product 2">
+                <h3>healthy and tasty oil</h3>
+                <p>Price: 335</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/280/280/kqidx8w0/edible-oil/y/y/r/kachi-ghani-pouch-mustard-oil-fortune-original-imag4gb3y5auktfg.jpeg?q=70" alt="Product 2">
+                <h3>Fortune Kachi gani oil</h3>
+                <p>Price: 94</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/280/280/kflftzk0hlty2aw-0/edible-oil/j/a/d/sunlite-refined-pouch-sunflower-oil-fortune-original-imafw33uhwkebr5j.jpeg?q=70" alt="Product 2">
+                <h3>Fortune sun lite</h3>
+                <p>Price: 90</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/280/280/xif0q/edible-oil/k/b/6/-original-imagh96hahcfrdcy.jpeg?q=70" alt="Product 2">
+                <h3>Healthy & Tasty Soyabean oil </h3>
+                <p>Price: 100</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/280/280/xif0q/edible-oil/z/b/t/-original-imaghkeuqqdyx7za.jpeg?q=70" alt="Product 2">
+                <h3>Healthy and Tasty Mustard oil</h3>
+                <p>Price: 649</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/280/280/xif0q/edible-oil/c/g/r/-original-imagt4wpyvfhybs6.jpeg?q=70" alt="Product 2">
+                <h3>Saffola Gold Oil with free 1L oil</h3>
+                <p>Price: 1,549</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/280/280/ky3b0y80/edible-oil/0/x/b/-original-imagaefdumvnf7hd.jpeg?q=70" alt="Product 2">
+                <h3>Saffola Total Cooking Oil</h3>
+                <p>Price: 849</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/280/280/kw104nk0/edible-oil/p/m/q/-original-imag8sfj7fcwrhu8.jpeg?q=70" alt="Product 2">
+                <h3>Dalda Soyabean oil </h3>
+                <p>Price: 149</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/280/280/kw104nk0/edible-oil/p/m/q/-original-imag8sfj7fcwrhu8.jpeg?q=70" alt="Product 2">
+                <h3>Dalda Soyabean oil</h3>
+                <p>Price: 149</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/280/280/l2xmqvk0/ghee/9/g/x/-original-image5uyyzzvgzzh.jpeg?q=70" alt="Product 2">
+                <h3>Paras Desi Ghee</h3>
+                <p>Price: 149</p>
+                <button>Add to Cart</button>
+            </div>
+            
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/81JhuEwbGOL.AC_UL320.jpg" alt="Product 2">
+                <h3>Yellow Banana Chips - Banana Wafers - Crispy Chips</h3>
+                <p>Price: 349</p>
+                <button>Add to Cart</button>
+            </div>
+
+            
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/280/280/xif0q/edible-oil/t/e/y/-original-imagh3mhtznwzfux.jpeg?q=70" alt="Product 2">
+                <h3>Fortune Xpert oil</h3>
+                <p>Price: 649</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/280/280/ky3b0y80/edible-oil/t/7/i/-original-imagaefdffjnxsdm.jpeg?q=70" alt="Product 2">
+                <h3>Saffola total cooking oil</h3>
+                <p>Price: 249</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/280/280/kl175ow0/edible-oil/o/a/i/refined-pouch-soyabean-oil-kings-original-imagy8zcdwmu4ah3.jpeg?q=70" alt="Product 2">
+                <h3>King'S Soyabin oil</h3>
+                <p>Price: 249</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/280/280/kqidx8w0/edible-oil/a/u/g/kachi-ghani-plastic-bottle-mustard-oil-fortune-original-imag4gb2njmgt7wq.jpeg?q=70" alt="Product 2">
+                <h3>Fortune Kachi ghani Pure Mustard oil</h3>
+                <p>Price: 149</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/280/280/xif0q/ghee/g/i/m/-original-imagv3udzxsxjzsh.jpeg?q=70" alt="Product 2">
+                <h3>Cow's GHEE </h3>
+                <p>Price: 249</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/280/280/kqidx8w0/edible-oil/u/4/x/kachi-ghani-can-mustard-oil-fortune-original-imag4gbyyr2jzfdq.jpeg?q=70" alt="Product 2">
+                <h3>Fortune Jachi Gani oil</h3>
+                <p>Price: 449</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/280/280/xif0q/ghee/p/o/e/-original-imagufywgrqe9nsu.jpeg?q=70" alt="Product 2">
+                <h3>AAshirvaad Svasti</h3>
+                <p>Price: 149</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/280/280/kflftzk0hlty2aw-0/edible-oil/2/m/z/sunlite-refined-can-sunflower-oil-fortune-original-imafw37vp5mntzzh.jpeg?q=70" alt="Product 2">
+                <h3>fortune Sun oil</h3>
+                <p>Price: 149</p>
+                <button>Add to Cart</button>
+            </div>
+
+
+            
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/280/280/xif0q/ghee/6/p/x/-original-imagg2y3dcf9nfrk.jpeg?q=70" alt="Product 2">
+                <h3>Ananda Pure Ghee</h3>
+                <p>Price: 149</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://rukminim2.flixcart.com/image/280/280/xif0q/edible-oil/y/t/g/-original-imaghngbbjzj4huf.jpeg?q=70" alt="Product 2">
+                <h3>Kachi GHani Mustard oil 1L</h3>
+                <p>Price: 149</p>
+                <button>Add to Cart</button>
+            </div>
+            
+            
+           
+    
+    
+    
+    
+            <div class="back-to-home">
+                <a href="http://127.0.0.1:5500/Home%20Page%20HTML.html" style="color: white; text-decoration: none;">Back to Home</a>
+
+                </a>
+    
+    
+        </div>
+    </body>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>
